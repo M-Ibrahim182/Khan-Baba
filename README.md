@@ -6,18 +6,14 @@ Welcome to the Khan Baba Restaurant website! This is my first React application,
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 
 - Responsive design for desktop and mobile devices
-- Showcase of menu items including wines, cocktails, and awards
+- Showcase of menu items including Traditional, Sweete, and awards
 - Interactive video background for destop users
 - Smooth navigation and user-friendly interface
+- It is a single page site
 
 ## Technologies Used
 
@@ -25,3 +21,6 @@ Welcome to the Khan Baba Restaurant website! This is my first React application,
 - **Create React App**: Tool to set up a modern web app by running one command.
 - **React Icons**: Library for including icons in the application.
 - **CSS**: For styling the components and layout.
+
+## Usage
+This site is not perfect so you should not use is diretly without exploring and improving the code. It is just a fun project.
