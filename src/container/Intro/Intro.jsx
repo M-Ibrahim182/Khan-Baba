@@ -1,17 +1,36 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { meal } from '../../constants';
 import './Intro.css';
 
 const Intro = () => {
   const vidRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Function to check if the device is mobile
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener('resize', handleResize); // Check on resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip the observer if on mobile
+
     const videoElement = vidRef.current;
 
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          videoElement.play();
+          videoElement.play().catch((error) => {
+            console.error('Error playing video:', error);
+          });
         } else {
           videoElement.pause();
         }
@@ -19,7 +38,7 @@ const Intro = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5, // Adjust this value to control when the video plays/stops
+      threshold: 0.5,
     });
 
     if (videoElement) {
@@ -31,7 +50,10 @@ const Intro = () => {
         observer.unobserve(videoElement);
       }
     };
-  }, []);
+  }, [isMobile]);
+
+  // Return null if on mobile or tablet
+  if (isMobile) return null;
 
   return (
     <div className="app__video">
