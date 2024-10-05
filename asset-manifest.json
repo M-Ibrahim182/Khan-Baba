@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Khan-baba/static/css/main.5c70edce.css",
+    "main.css": "/Khan-baba/static/css/main.281b1a96.css",
     "main.js": "/Khan-baba/static/js/main.116c9a01.js",
     "static/media/meal.mp4": "/Khan-baba/static/media/meal.a1b6c6dc67dfa2f99343.mp4",
     "static/media/bg.png": "/Khan-baba/static/media/bg.3d421b1b5682e1b67deb.png",
@@ -25,11 +25,11 @@
     "static/media/sign.png": "/Khan-baba/static/media/sign.9bf0bd90ad4caa17991f.png",
     "static/media/spoon.svg": "/Khan-baba/static/media/spoon.b5681c867bb867d794693513d048401f.svg",
     "index.html": "/Khan-baba/index.html",
-    "main.5c70edce.css.map": "/Khan-baba/static/css/main.5c70edce.css.map",
+    "main.281b1a96.css.map": "/Khan-baba/static/css/main.281b1a96.css.map",
     "main.116c9a01.js.map": "/Khan-baba/static/js/main.116c9a01.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c70edce.css",
+    "static/css/main.281b1a96.css",
     "static/js/main.116c9a01.js"
   ]
 }
